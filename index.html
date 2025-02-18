@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window onLoad Event</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> --> 
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="content">
+            <p>The load event is fired when the whole page has loaded, including all dependent resources such as
+                stylesheets, scripts,
+                iframes, and images, except those that are loaded lazily. This is in contrast to DOMContentLoaded, which is
+                fired as
+                soon as the page DOM has been loaded, without waiting for resources to finish loading.
+            </p>
+            <p>Note: All events named load will not propagate to Window, even with bubbles initialized to true. To catch
+                load events on
+                the window, that load event must be dispatched directly to the window.
+
+                Note: The load event that is dispatched when the main document has loaded is dispatched on the window, but
+                has two
+                mutated properties: target is document, and path is undefined. These two properties are mutated due to
+                legacy
+                conformance.</p>
+            <p>
+                Usage
+                If any of your document’s event handlers depend on the document being fully loaded, you should check that it is loaded
+                before executing those handlers. If the network connection were to stall out after a button appeared in the document but
+                before the parts of the document that the button relied on were loaded, the user would get unintended behavior or an
+                error message after clicking the button. One good way to verify that the document is loaded is to use the onload handler
+                to set a variable -- loaded, for example -- to true and to check the value of this variable before doing anything that
+                depends on the complete document being loaded.
+
+            </p>
+        </div>
+        <a href="#" class="" id="show-more">Show More</a> 
+    </div>
+    <script src="script.js"></script> 
+</body>
+
+</html>
